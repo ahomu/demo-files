@@ -1,0 +1,17 @@
+{
+  "name": "frontrend_playground",
+  "description": "frontrend vol.3 demo grunt playground",
+  "version": "0.0.1",
+  "author": "ahomu",
+  "main": "grunt.js",
+  "dependencies": {
+    "grunt-contrib": "~0.3.0",
+    "grunt-img": "~0.1.4",
+    "grunt-data-uri": "0.0.2",
+    "grunt-reload": "~0.2.0",
+    "grunt-csso": "~0.2.0"
+  },
+  "optionalDependencies": {
+    "grunt": "~0.3.16"
+  }
+}

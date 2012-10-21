@@ -1,0 +1,6 @@
+.someClassA {
+  background-image: url(../../img/sozai.jpg);
+}
+.someClassB {
+  background-image: url(../../img/data-uri/panda.jpg);
+}
