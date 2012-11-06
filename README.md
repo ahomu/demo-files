@@ -1,7 +1,7 @@
 #Grunt Introduction file set
 
-Frontrend Vol.3 のgruntのデモセット
+Frontrend「ビルドプロセスの自動化で効率アップ」
 
-興味のある方はcloneしてください。（nodeとnpmが別途必要です）
+Gruntのデモセット
 
-※10/31までの限定公開予定
+年内一杯の公開予定で、以降は予告なくリポジトリが削除される可能性があります。
