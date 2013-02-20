@@ -2,6 +2,9 @@
 
 Frontrendでデモした構成です。簡易なGistビューワー。
 
++ スライド [https://speakerdeck.com/ahomu/jquery-to-backbone-into-javascript-architecture](https://speakerdeck.com/ahomu/jquery-to-backbone-into-javascript-architecture) 
++ ビデオ [https://vimeo.com/album/2260782/video/59558632](https://vimeo.com/album/2260782/video/59558632)
+
 ##ファイル構成
 
 `js/main`以下が、各段階のJavaScriptファイルです。
@@ -53,5 +56,5 @@ var config = {
 
 Macであれば`python -m SimpleHTTPServer 8000`でローカルサーバ—を立ち上げるのが簡単です。XAMPPやMAMPなどのお手軽アプリを利用するのも良いでしょう。
 
-※ 別途、Gruntを利用したローカルサーバ— + ファイルの更新監視＆LiveReloadの設定も同梱しています。
+※ 別途、Gruntを利用したローカルサーバ— + ファイルの更新監視＆LiveReloadの設定も同梱しています。  
 ※ grunt0.4系を実行可能な環境で、`npm link`を実行してから、`grunt default`(defaultは省略可)を叩けば`localhost:8000`で閲覧できるようになります。
