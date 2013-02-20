@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>Test Page</title>
+<link href="css/normalize.css" rel="stylesheet">
+<link href="css/highlight.css" rel="stylesheet">
+<link href="css/main_b3.css" rel="stylesheet">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/7.3/highlight.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/1.0.0-rc.3/lodash.min.js"></script>
+<!-- <script src="//underscorejs.org/underscore-min.js"></script> -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/backbone.js/0.9.10/backbone-min.js"></script>
+
+<script src="js/config.js"></script>
+<script src="js/main/b3.js"></script>
+</head>
+<body>
+<h1>Public Gists List</h1>
+
+<div id="js-gists">
+  <ul>
+    <li class="initial-spiner"><img src="img/365.gif" alt="loading" width="64" height="64"></li>
+    <!-- LISTUP CONTAINER -->
+  </ul>
+</div>
+
+<div id="js-gist-preview">
+  <!-- PREVIEW CONTAINER -->
+</div>
+
+
+
+
+
+<script id="tmpl-js-gists" type="tmpl/text">
+<button id="js-sort-updated">更新日時ソート（降順）</button>
+<button id="js-sort-title-length-asc">タイトルの文字数ソート（昇順）</button>
+<button id="js-sort-title-length-desc">タイトルの文字数ソート（降順）</button>
+<ul>
+  <% _.each(items, function(item) { %>
+  <li>
+    <a data-id="<%= item.id %>" data-src="<%= item.url %>" href="#"><%= item.description %></a>
+    <a href="<%= item.html_url %>">Show in gists</a>
+  </li>
+  <% }); %>
+</ul>
+</script>
+
+<script id="tmpl-js-gist-preview" type="tmpl/text">
+<% _.each(files, function(file) { %>
+<h2><%= file.filename %></h2>
+<pre class="<%= file.language %>"><%- file.content %></pre>
+<% }); %>
+</script>
+
+</body>
+</html>
