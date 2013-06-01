@@ -49,9 +49,9 @@ $(function() {
       });
     },
     preview: function(event) {
-      gistPreview.model = this.collection.where({
+      gistPreview.model = this.collection.findWhere({
         id: $(event.currentTarget).attr('data-id')
-      })[0];
+      });
       gistPreview.show();
       return false;
     },

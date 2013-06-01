@@ -13,6 +13,7 @@
     "grunt-contrib-server": "~0.1.0",
     "grunt-contrib-watch": "~0.1.4",
     "grunt-reload": "git://github.com/webxl/grunt-reload.git",
-    "grunt": "git://github.com/gruntjs/grunt.git"
+    "grunt": "git://github.com/gruntjs/grunt.git",
+    "grunt-contrib-stylus": "~0.3.1"
   }
 }

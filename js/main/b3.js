@@ -29,9 +29,9 @@ $(function() {
   var Gists = Backbone.Collection.extend({
     url: 'https://api.github.com/gists?' + $.param(oauthData),
     model: Gist,
-    order_by: 'id',
+    orderRule: 'id',
     comparator: function(gist) {
-      switch(this.order_by) {
+      switch(this.orderRule) {
         case 'id':
           return gist.get('id');
         case 'updated_at':
@@ -41,6 +41,10 @@ $(function() {
         case 'desc_length_desc':
           return -gist.get('description').length;
       }
+    },
+    orderBy: function(rule) {
+      this.orderRule = rule;
+      this.sort();
     }
   });
 
@@ -66,21 +70,18 @@ $(function() {
       this.collection.on('sort', this.render);
     },
     sortByUpdatedAt: function() {
-      this.collection.order_by = 'updated_at';
-      this.collection.sort();
+      this.collection.orderBy('updated_at');
     },
     sortByTitleLengthAsc: function() {
-      this.collection.order_by = 'desc_length_asc';
-      this.collection.sort();
+      this.collection.orderBy('desc_length_asc');
     },
     sortByTitleLengthDesc: function() {
-      this.collection.order_by = 'desc_length_desc';
-      this.collection.sort();
+      this.collection.orderBy('desc_length_desc');
     },
     preview: function(event) {
-      gistPreview.model = this.collection.where({
+      gistPreview.model = this.collection.findWhere({
         id: $(event.currentTarget).attr('data-id')
-      })[0];
+      });
       gistPreview.show();
       return false;
     },
